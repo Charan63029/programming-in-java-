@@ -1,0 +1,17 @@
+public class RightTriangleStarPattern {
+    public static void main(String[] args) {
+        int n = 5;  // number of rows in the triangle
+        for (int i = 0; i < n; i++) {  // iterate over the rows
+            // print spaces for indentation
+            for (int j = 0; j < n-i-1; j++) {
+                System.out.print(" ");
+            }
+            // print stars for the triangle
+            for (int k = 0; k <= i; k++) {
+                System.out.print("* ");
+            }
+            // move to the next line
+            System.out.println();
+        }
+    }
+}
