@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class RectanglePattern {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a symbol to use for the pattern: ");
+        char symbol = input.next().charAt(0);
+        int n = 5;  // number of rows in the pattern
+        int m = 10;  // number of columns in the pattern
+        for (int i = 0; i < n; i++) {  // iterate over the rows
+            for (int j = 0; j < m; j++) {  // iterate over the columns
+                if (i == 0 || i == n-1 || j == 0 || j == m-1) {
+                    System.out.print(symbol + " ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();  // move to the next line
+        }
+        input.close();
+    }
+}
