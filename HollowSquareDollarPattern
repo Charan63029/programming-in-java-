@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class HollowSquareDollarPattern {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the size of the pattern: ");
+        int size = input.nextInt();
+        input.close();
+
+        // Print the top row
+        for (int i = 1; i <= size; i++) {
+            System.out.print("$ ");
+        }
+        System.out.println();
+
+        // Print the middle rows
+        for (int i = 2; i <= size - 1; i++) {
+            System.out.print("$ ");
+            for (int j = 2; j <= size - 1; j++) {
+                System.out.print("  ");
+            }
+            System.out.print("$ ");
+            System.out.println();
+        }
+
+        // Print the bottom row
+        for (int i = 1; i <= size; i++) {
+            System.out.print("$ ");
+        }
+    }
+}
