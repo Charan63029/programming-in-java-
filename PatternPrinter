@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class PatternPrinter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number to be printed: ");
+        int num = scanner.nextInt();
+        System.out.print("Max Number of time printed: ");
+        int maxTimes = scanner.nextInt();
+        
+        // print the upper triangle of the pattern
+        for (int i = 0; i < maxTimes; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print(num);
+            }
+            System.out.println();
+        }
+        
+        // print the lower triangle of the pattern
+        for (int i = 0; i < maxTimes-1; i++) {
+            for (int j = 0; j < maxTimes-1-i; j++) {
+                System.out.print(num);
+            }
+            System.out.println();
+        }
+        
+        scanner.close();
+    }
+}
