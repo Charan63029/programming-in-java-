@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class HollowSquarePattern {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the size of the square: ");
+        int size = input.nextInt();
+        input.close();
+
+        for (int row = 1; row <= size; row++) {
+            for (int col = 1; col <= size; col++) {
+                // Print asterisks for first and last row, and first and last column
+                if (row == 1 || row == size || col == 1 || col == size) {
+                    System.out.print("*");
+                } else {
+                    // Print spaces for the inner square
+                    System.out.print(" ");
+                }
+            }
+            // Move to the next row
+            System.out.println();
+        }
+    }
+}
