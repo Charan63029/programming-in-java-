@@ -1,0 +1,20 @@
+public class PatternPrinting {
+    public static void main(String[] args) {
+        int n = 5;  // number of rows in the pattern
+        for (int i = 0; i < n; i++) {  // iterate over the rows
+            // print spaces for indentation
+            for (int j = 0; j < n-i-1; j++) {
+                System.out.print("  ");
+            }
+            // initialize the value of each element in the row
+            int c = 1;
+            // calculate and print each element in the row
+            for (int k = 0; k <= i; k++) {
+                System.out.printf("%4d", c);
+                c = c * (i-k) / (k+1);
+            }
+            // move to the next line
+            System.out.println();
+        }
+    }
+}
